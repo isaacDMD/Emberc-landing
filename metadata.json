@@ -1,0 +1,6 @@
+{
+  "name": "EMBERC - Plateforme Numérique",
+  "description": "Site vitrine de présentation du projet Église Mission Baptiste Évangélique Royaume du Christ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
