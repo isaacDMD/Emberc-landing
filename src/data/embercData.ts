@@ -6,11 +6,34 @@ export const PROJECT_INFO = {
   subTitle: "Plateforme Numérique Paroissiale Centralisée",
   leadAuthor: "Isaac DJIMADJO",
   developerTitle: "Développeur indépendant & concepteur du projet",
-  scriptureQuote: {
-    text: "Que tout se fasse avec ordre, dignité et pour l'édification commune de l'Église.",
-    reference: "1 Corinthiens 14:40 & 26"
-  }
 };
+
+export const SCRIPTURE_QUOTES = [
+  {
+    text: "Que tout se fasse avec ordre, dignité et pour l'édification commune de l'Église.",
+    reference: "1 Corinthiens 14:40 & 26",
+  },
+  {
+    text: "Ne cessons pas de nous réunir, comme c'est la coutume de quelques-uns ; mais exhortons-nous réciproquement.",
+    reference: "Hébreux 10:25",
+  },
+  {
+    text: "Il y a diversité de dons, mais le même Esprit. Chacun reçoit le don de manifester l'Esprit pour l'utilité commune.",
+    reference: "1 Corinthiens 12:4,7",
+  },
+  {
+    text: "Portez les fardeaux les uns des autres, et accomplissez ainsi la loi de Christ.",
+    reference: "Galates 6:2",
+  },
+  {
+    text: "Que votre parole soit toujours accompagnée de grâce, assaisonnée de sel, afin que vous sachiez comment répondre à chacun.",
+    reference: "Colossiens 4:6",
+  },
+  {
+    text: "Ainsi que vous l'avez appris de nous, comment il faut se conduire et plaire à Dieu, en progressant toujours.",
+    reference: "1 Thessaloniciens 4:1",
+  },
+];
 
 export const FEATURE_MODULES: FeatureModule[] = [
   {

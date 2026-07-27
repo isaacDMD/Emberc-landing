@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PROJECT_INFO } from '../data/embercData';
 import { Heart, BookOpen, Sparkles, UserCheck, Quote, Edit3 } from 'lucide-react';
+import { RotatingScriptureQuote } from './RotatingScriptureQuote';
 
 export const ConvictionSection: React.FC = () => {
   const [authorName, setAuthorName] = useState(PROJECT_INFO.leadAuthor);
@@ -17,10 +18,6 @@ export const ConvictionSection: React.FC = () => {
 
           {/* Section Header */}
           <div className="text-center space-y-3">
-            <div className="inline-flex items-center gap-2 bg-[#2F3B6B]/10 text-[#2F3B6B] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              <Heart className="w-3.5 h-3.5 text-[#C99A3E]" />
-              <span>Message de Conviction</span>
-            </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#2F3B6B]">
               Une vision fraternelle au service du Royaume
             </h2>
@@ -37,17 +34,7 @@ export const ConvictionSection: React.FC = () => {
           </div>
 
           {/* Scripture Quote Box */}
-          <div className="bg-[#F5F4F1] p-6 sm:p-8 rounded-2xl border-l-4 border-[#C99A3E] relative">
-            <Quote className="w-8 h-8 text-[#C99A3E]/30 absolute top-4 right-4" />
-            <blockquote className="space-y-2 text-center sm:text-left">
-              <p className="font-serif italic text-base sm:text-lg text-[#2F3B6B] leading-relaxed">
-                « {PROJECT_INFO.scriptureQuote.text} »
-              </p>
-              <cite className="block text-xs font-bold uppercase tracking-wider text-[#8A641B] not-italic">
-                — {PROJECT_INFO.scriptureQuote.reference}
-              </cite>
-            </blockquote>
-          </div>
+          <RotatingScriptureQuote />
 
           {/* Developer Credit & Interactive Signature Placeholder */}
           <div className="pt-6 border-t border-[#2F3B6B]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
