@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROGRESS_ITEMS } from '../data/embercData';
-import { CheckCircle2, Clock, Sparkles, Image as ImageIcon, Smartphone, Radio, BellRing, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Clock, Sparkles } from 'lucide-react';
 
 export const AvancementSection: React.FC = () => {
   const doneItems = PROGRESS_ITEMS.filter((item) => item.status === 'done');
@@ -115,127 +115,6 @@ export const AvancementSection: React.FC = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Screenshot Placeholder Containers Explicitly Named */}
-        <div className="bg-[#FDFCFA] rounded-3xl p-6 sm:p-8 border border-[#2F3B6B]/10 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#2F3B6B]/10 pb-4">
-            <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8A641B] uppercase tracking-wider mb-1">
-                <ImageIcon className="w-4 h-4" />
-                <span>Captures d'Écran Réelles du Système</span>
-              </div>
-              <h3 className="font-serif text-2xl font-bold text-[#2F3B6B]">
-                Aperçu visuel des modules déjà développés
-              </h3>
-            </div>
-            <a
-              href="#apercu"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2F3B6B] hover:text-[#C99A3E] transition-colors"
-            >
-              <span>Voir la galerie complète</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-
-          <p className="text-xs text-[#23222B]/70 leading-relaxed">
-            Les visuels ci-dessous illustrent les écrans réels de l'application (consultation des programmes, carnet de chants, gestion des lectures et espace d'administration).
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Explicit Placeholder 1 */}
-            <div className="group relative rounded-xl bg-[#F5F4F1] border border-[#2F3B6B]/15 overflow-hidden p-3 transition-all hover:shadow-md">
-              <div className="aspect-video rounded-lg overflow-hidden bg-[#23222B] relative flex items-center justify-center">
-                <img
-                  src="capture-programme-culte.png"
-                  alt="Capture du programme de culte"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    // Visual fallback if placeholder image not found yet
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="p-3 text-center text-[#FDFCFA] space-y-1">
-                  <span className="text-[10px] font-mono bg-[#2F3B6B] text-[#C99A3E] px-2 py-0.5 rounded border border-[#C99A3E]/30 block">
-                    capture-programme-culte.png
-                  </span>
-                  <p className="text-[11px] font-semibold">Programme de Culte</p>
-                </div>
-              </div>
-              <p className="text-[11px] font-semibold text-[#23222B] mt-2 text-center">
-                Programme & Prédicateur
-              </p>
-            </div>
-
-            {/* Explicit Placeholder 2 */}
-            <div className="group relative rounded-xl bg-[#F5F4F1] border border-[#2F3B6B]/15 overflow-hidden p-3 transition-all hover:shadow-md">
-              <div className="aspect-video rounded-lg overflow-hidden bg-[#23222B] relative flex items-center justify-center">
-                <img
-                  src="capture-chants.png"
-                  alt="Capture des chants et paroles"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="p-3 text-center text-[#FDFCFA] space-y-1">
-                  <span className="text-[10px] font-mono bg-[#2F3B6B] text-[#C99A3E] px-2 py-0.5 rounded border border-[#C99A3E]/30 block">
-                    capture-chants.png
-                  </span>
-                  <p className="text-[11px] font-semibold">Recueil de Chants & Audio</p>
-                </div>
-              </div>
-              <p className="text-[11px] font-semibold text-[#23222B] mt-2 text-center">
-                Paroles & Lecteur Audio
-              </p>
-            </div>
-
-            {/* Explicit Placeholder 3 */}
-            <div className="group relative rounded-xl bg-[#F5F4F1] border border-[#2F3B6B]/15 overflow-hidden p-3 transition-all hover:shadow-md">
-              <div className="aspect-video rounded-lg overflow-hidden bg-[#23222B] relative flex items-center justify-center">
-                <img
-                  src="capture-connexion.png"
-                  alt="Capture de la connexion"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="p-3 text-center text-[#FDFCFA] space-y-1">
-                  <span className="text-[10px] font-mono bg-[#2F3B6B] text-[#C99A3E] px-2 py-0.5 rounded border border-[#C99A3E]/30 block">
-                    capture-connexion.png
-                  </span>
-                  <p className="text-[11px] font-semibold">Connexion Identifiant</p>
-                </div>
-              </div>
-              <p className="text-[11px] font-semibold text-[#23222B] mt-2 text-center">
-                Accès Sans Email
-              </p>
-            </div>
-
-            {/* Explicit Placeholder 4 */}
-            <div className="group relative rounded-xl bg-[#F5F4F1] border border-[#2F3B6B]/15 overflow-hidden p-3 transition-all hover:shadow-md">
-              <div className="aspect-video rounded-lg overflow-hidden bg-[#23222B] relative flex items-center justify-center">
-                <img
-                  src="capture-medias.png"
-                  alt="Capture des médias"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="p-3 text-center text-[#FDFCFA] space-y-1">
-                  <span className="text-[10px] font-mono bg-[#2F3B6B] text-[#C99A3E] px-2 py-0.5 rounded border border-[#C99A3E]/30 block">
-                    capture-medias.png
-                  </span>
-                  <p className="text-[11px] font-semibold">Médiathèque Paroissiale</p>
-                </div>
-              </div>
-              <p className="text-[11px] font-semibold text-[#23222B] mt-2 text-center">
-                Photos, Audios & Docs
-              </p>
-            </div>
-          </div>
         </div>
 
       </div>

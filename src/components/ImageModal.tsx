@@ -48,18 +48,7 @@ export const ImageModal: React.FC<ImageModalProps> = ({ item, onClose }) => {
                 e.currentTarget.style.display = 'none';
               }}
             />
-            {/* Visual Placeholder Badge */}
-            <div className="p-6 text-center text-[#FDFCFA] space-y-2">
-              <span className="text-xs font-mono bg-[#2F3B6B] text-[#C99A3E] px-3 py-1 rounded-full border border-[#C99A3E]/30 inline-block font-bold">
-                Fichier image : {item.imageSrc}
-              </span>
-              <p className="text-sm font-semibold text-[#FDFCFA]/90">
-                Aperçu : {item.title}
-              </p>
-              <p className="text-xs text-[#FDFCFA]/60 max-w-md mx-auto">
-                Vous pourrez remplacer facilement ce fichier image nommé <code className="text-[#C99A3E]">{item.imageSrc}</code> par votre capture réelle.
-              </p>
-            </div>
+
           </div>
 
           {/* Description & Highlights */}

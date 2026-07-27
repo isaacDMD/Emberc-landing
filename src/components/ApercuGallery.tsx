@@ -88,23 +88,15 @@ export const ApercuGallery: React.FC = () => {
             >
               <div>
                 {/* Mockup Frame & Image */}
-                <div className="relative bg-[#23222B] aspect-[16/10] overflow-hidden border-b border-[#2F3B6B]/10 flex items-center justify-center">
+                <div className="relative bg-[#23222B] aspect-[16/10] overflow-hidden border-b border-[#2F3B6B]/10">
                   <img
                     src={item.imageSrc}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
-
-                  {/* Fallback Display if Placeholder Image is not yet placed in folder */}
-                  <div className="p-4 text-center text-[#FDFCFA] space-y-1.5 z-0">
-                    <span className="text-[10px] font-mono bg-[#2F3B6B] text-[#C99A3E] px-2.5 py-1 rounded border border-[#C99A3E]/30 font-bold inline-block">
-                      {item.imageSrc}
-                    </span>
-                    <h4 className="text-xs font-bold text-[#FDFCFA]">{item.title}</h4>
-                  </div>
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-[#2F3B6B]/60 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-[#FDFCFA] font-semibold text-xs">
@@ -130,10 +122,7 @@ export const ApercuGallery: React.FC = () => {
               </div>
 
               {/* Footer Badge */}
-              <div className="px-5 py-3 bg-[#FDFCFA] border-t border-[#2F3B6B]/10 flex items-center justify-between text-[11px] text-[#23222B]/60">
-                <span className="font-mono text-[10px] text-[#8A641B]">
-                  src="{item.imageSrc}"
-                </span>
+              <div className="px-5 py-3 bg-[#FDFCFA] border-t border-[#2F3B6B]/10 flex items-center justify-end text-[11px] text-[#23222B]/60">
                 <span className="font-semibold text-[#2F3B6B] flex items-center gap-1">
                   <span>Agrandir</span>
                   <span>→</span>
